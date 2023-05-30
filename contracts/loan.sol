@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-import "./ierc20token.sol";
+// import "./ierc20token.sol";
 
 contract Loan {
     address public lender; // Address of the lender

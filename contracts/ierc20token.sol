@@ -13,7 +13,7 @@ contract SimpleERC20Token {
 
     event Transfer(address indexed from, address indexed to, uint256 value);
 
-    function SimpleERC20Token() public {
+    constructor() public {
         // Initially assign all tokens to the contract's creator.
         balanceOf[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply); // Emit an event to indicate the initial token transfer

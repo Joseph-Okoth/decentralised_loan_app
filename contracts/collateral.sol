@@ -8,7 +8,7 @@ contract LoanRequest {
     // The borrower's address is set to the sender's address
     address public borrower = msg.sender;
     // The token contract
-    IERC20Token public token;
+    SimpleERC20Token public token;
     // The amount of collateral required for the loan
     uint256 public collateralAmount;
     // The amount of the loan requested
@@ -19,8 +19,8 @@ contract LoanRequest {
     uint256 public loanDuration;
 
     // Constructor to initialize the contract with the specified parameters
-    function LoanRequest(
-        IERC20Token _token,
+    constructor (
+        SimpleERC20Token _token,
         uint256 _collateralAmount,
         uint256 _loanAmount,
         uint256 _payoffAmount,

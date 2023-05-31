@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-// import "./ierc20token.sol";
+import "./ierc20token.sol";
 
 contract Loan {
     address public lender; // Address of the lender
     address public borrower; // Address of the borrower
-    IERC20Token public token; // Reference to an ERC20 token contract
+    SimpleERC20Token public token; // Reference to an ERC20 token contract
     uint256 public collateralAmount; // Amount of collateral provided by the borrower
     uint256 public payoffAmount; // Amount that needs to be repaid by the borrower
     uint256 public dueDate; // Timestamp representing the due date for the loan
@@ -14,13 +14,11 @@ contract Loan {
     constructor(
         address _lender,
         address _borrower,
-        IERC20Token _token,
+        SimpleERC20Token _token,
         uint256 _collateralAmount,
         uint256 _payoffAmount,
         uint256 loanDuration
-    )
-        public
-    {
+    ) public {
         lender = _lender; // Set the lender address
         borrower = _borrower; // Set the borrower address
         token = _token; // Set the token reference

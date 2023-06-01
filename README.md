@@ -1,6 +1,7 @@
 # solidity_loan_smart_contract
 
 **Background Context**
+
 Simple solidity smart contract for borrowing and lending in web3 space using ERC20 token.
 
 ## Technologies & Tools:
@@ -11,8 +12,8 @@ Simple solidity smart contract for borrowing and lending in web3 space using ERC
 
 ## Requirements:
 Installed:
-- 1. truffle
-- 2. 
+- [Truffle](https://trufflesuite.com/docs/truffle/how-to/install/)
+- [Nodejs](https://nodejs.org/en/download)
 
 ## Getting it started
 ### Clone repo using HTTPS

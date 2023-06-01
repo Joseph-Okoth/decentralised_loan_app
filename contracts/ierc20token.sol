@@ -21,7 +21,7 @@ contract SimpleERC20Token {
 
     // Transfer tokens from the sender's address to a specified recipient
     function transfer(address to, uint256 value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= value); // Check if the sender has enough tokens
+        require(balanceOf[msg.sender] >= value, "Insufficient balance"); // Check if the sender has enough tokens
 
         balanceOf[msg.sender] -= value;  // Deduct tokens from the sender's balance
         balanceOf[to] += value;          // Add tokens to the recipient's balance
@@ -34,22 +34,16 @@ contract SimpleERC20Token {
     mapping(address => mapping(address => uint256)) public allowance;
 
     // Approve a specified address to spend a specified amount of tokens on behalf of the sender
-    function approve(address spender, uint256 value)
-        public
-        returns (bool success)
-    {
+    function approve(address spender, uint256 value) public returns (bool success) {
         allowance[msg.sender][spender] = value; // Set the allowance for the spender
         emit Approval(msg.sender, spender, value); // Emit an event to indicate the approval
         return true;
     }
 
     // Transfer tokens from a specified address to another address on behalf of the sender
-    function transferFrom(address from, address to, uint256 value)
-        public
-        returns (bool success)
-    {
-        require(value <= balanceOf[from]); // Check if the from address has enough tokens
-        require(value <= allowance[from][msg.sender]); // Check if the sender is allowed to spend the specified amount of tokens from the from address
+    function transferFrom(address from, address to, uint256 value) public returns (bool success) {
+        require(value <= balanceOf[from], "Insufficient balance"); // Check if the from address has enough tokens
+        require(value <= allowance[from][msg.sender], "Insufficient allowance"); // Check if the sender is allowed to spend the specified amount of tokens from the from address
 
         balanceOf[from] -= value; // Deduct tokens from the from address
         balanceOf[to] += value; // Add tokens to the recipient's balance

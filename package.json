@@ -1,7 +1,7 @@
 {
   "name": "solidity_loan_smart_contract",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Background Context**",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
@@ -14,5 +14,9 @@
   "repository": {
     "type": "git",
     "url": "solidity_loan_smart_contract"
+  },
+  "keywords": [],
+  "dependencies": {
+    "web3": "^1.10.0"
   }
 }

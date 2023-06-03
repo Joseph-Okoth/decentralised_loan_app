@@ -8,6 +8,10 @@ Simple solidity smart contract for borrowing and lending in web3 space using ERC
 
 ![Git](https://img.shields.io/badge/≡-Git-F05032?logo=git&style=flat-square&labelColor=282828)
 ![GitHub](https://img.shields.io/badge/≡-GitHub-181717?logo=GitHub&style=flat-square&labelColor=282828)
+![Node.js](https://img.shields.io/badge/≡-Node.js-339933?logo=node.js&style=flat-square&labelColor=282828)
+![React](https://img.shields.io/badge/≡-React-61DAFB?logo=react&style=flat-square&labelColor=282828)
+![Solidity](https://img.shields.io/badge/≡-Solidity-363636?logo=solidity&style=flat-square&labelColor=282828)
+
 
 
 ## Requirements:
@@ -20,11 +24,18 @@ Installed:
 ```
 $ git clone https://github.com/jonyach/solidity_loan_smart_contract.git
 ```
-### Compilation
-You can compile the files using this command to check that there are no errors:
+### Compilation and interaction
+1. You can compile the files using this command to check that there are no errors:
 
 ```
 $ truffle compile
+```
+2. You can interact with the frontend interface also;
+```
+$ cd loan-app
+```
+```
+$ npm start
 ```
 
 ### Contribution

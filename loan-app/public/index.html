@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./App.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan App</title>
+</head>
+<body>
+  <h1>Loan App</h1>
+
+  <form id="loanForm">
+    <label for="borrowerAddress">Borrower Address:</label>
+    <input type="text" id="borrowerAddress" required>
+
+    <label for="collateralAmount">Collateral Amount:</label>
+    <input type="number" id="collateralAmount" required>
+
+    <label for="payoffAmount">Payoff Amount:</label>
+    <input type="number" id="payoffAmount" required>
+
+    <label for="loanDuration">Loan Duration (in seconds):</label>
+    <input type="number" id="loanDuration" required>
+
+    <button type="submit">Create Loan</button>
+  </form>
+
+  <div id="output" class="output"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body
+{
+  background-color: blue;
+}
+  {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  input {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  button {
+    padding: 20px;
+  }
+  .output {
+    margin-top: 20px;
+    border: 1px solid #916666;
+    padding: 10px;
+  }
